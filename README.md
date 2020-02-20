@@ -1,1 +1,1 @@
-# codejam-canvas
+# Canvas App

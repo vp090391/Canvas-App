@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-document.addEventListener('keydown', (e) => {
-    if (e.code === 'KeyB') {fillBucket()}
-    if (e.code === 'KeyP') {pencil()}
-    if (e.code === 'KeyC') {chooseColor()}
-});
-
 document.addEventListener('mousedown', () => {
     document.querySelector('canvas').style.filter = 'grayscale(0)';
 });
@@ -69,10 +63,10 @@ function pencil() {
     function draw(e) {
         if (!isDrawing) return;
         if (pencilOff) return;
-        let x = Math.floor(e.offsetX / 128);
-        let y = Math.floor(e.offsetY / 128);
+        let x = Math.floor(e.offsetX / 16);
+        let y = Math.floor(e.offsetY / 16);
         ctx.fillStyle = document.getElementById('curentColor').value;
-        ctx.fillRect(x * 128, y * 128, 128, 128);
+        ctx.fillRect(x * 16, y * 16, 16, 16);
     }
     canvas.addEventListener('mousedown', (e) => {
         isDrawing = true;
@@ -91,7 +85,7 @@ function fillBucket() {
     for (let i = 0; i <= 3; i++) {
         for (let j = 0; j <= 3; j++) {
             ctx.fillStyle = document.getElementById('curentColor').value;
-            ctx.fillRect(128 * i, 128 * j, 128, 128);
+            ctx.fillRect(16 * i, 16 * j, 16, 16);
         }
     }
 }
@@ -136,67 +130,12 @@ function rgbToHex(colorRGB) {
     }
 }
 
-function fourByFour(){
-    let canvas = document.querySelector('canvas');
-    canvas.height = 512;
-    canvas.width = 512;
-    let ctx = canvas.getContext('2d');
-    fetch("https://raw.githubusercontent.com/vp090391/tasks/master/tasks/stage-2/codejam-canvas/data/4x4.json")
-        .then(response => {
-            return response.json()
-        })
-        .then(json => {
-                for (let i = 0; i <= 3; i++) {
-                    for (let j = 0; j <= 3; j++) {
-                        ctx.fillStyle = '#' + json[j][i];
-                        ctx.fillRect(128 * i, 128 * j, 128, 128);
-                    }
-                }
-            }
-        );
-}
-
-function thirtyByThirty() {
-    let canvas = document.querySelector('canvas');
-    canvas.height = 512;
-    canvas.width = 512;
-    let ctx = canvas.getContext('2d');
-
-    fetch("https://raw.githubusercontent.com/vp090391/tasks/master/tasks/stage-2/codejam-canvas/data/32x32.json")
-        .then(response => {
-            return response.json()
-        })
-        .then(json => {
-                for (let i = 0; i <= 31; i++) {
-                    for (let j = 0; j <= 31; j++) {
-                        let color = json[j][i];
-                        color[3] = color[3] / 255;
-                        ctx.fillStyle = 'rgba' + '(' + color + ')';
-                        ctx.fillRect(16 * i, 16 * j, 16, 16);
-                    }
-                }
-            }
-        );
-}
-
-function image() {
-    let canvas = document.querySelector('canvas');
-    let ctx = canvas.getContext('2d');
-    canvas.width = 512;
-    canvas.height = 512;
-    let img = new Image();
-    img.src = 'codejam-canvas/image.png';
-    img.onload = () => {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height );
-    };
-}
-
 function loadImage () {
     request = document.getElementById('searchField').value;
     const url = 'https://api.unsplash.com/photos/random?query=' + request + '&client_id=2357d4e96e9d684f22d0ab258f4227c31a07b42ecaeb7aee557f43748eda2cd4';
     fetch(url)
         .then(res => res.json())
-        .then(data => data.urls.small )
+        .then(data => data.urls.regular )
         .then(link => {
             console.log(link);
             let img = new Image();

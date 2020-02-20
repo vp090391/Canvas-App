@@ -13,18 +13,9 @@
 }
 
 .header-panel-h2 {
-    padding-left: 35px;
+    margin: auto;
     font-family: Roboto, serif;
     font-size: 20px;
-}
-
-.header-panel-leftButton {
-    padding-left: 19px;
-}
-
-.header-panel-rightButton {
-    margin-left: auto;
-    padding-right: 20px;
 }
 
 .main {
@@ -39,37 +30,16 @@
     width: 512px;
     height: 512px;
     left: 50%;
-    top: 70px;
+    top: 10%;
     box-sizing: content-box;
     border: 1px solid black;
 }
 
-.main-buttonSizeImage-container {
-    width: 114px;
-    position: absolute;
-    left: 33%;
-    top: 301px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #FFFFFF;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
-}
-
-.main-b-c-button {
-    width: 100%;
-    height: 30px;
-    background-color: #FFFFFF;
-    cursor: pointer;
-    font-family: Roboto, serif;
-    font-size: 16px;
-}
-
 .main-instruments {
     width: 246px;
-    position: relative;
-    left: 5%;
-    top: 70px;
+    position: absolute;
+    left: 20%;
+    top: 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -108,16 +78,11 @@
     background-image: url("assets/Pencil.png");
 }
 
-.main-instruments-transform {
-    background-image: url("assets/transform.svg");
-    opacity: 0.3;
-}
-
 .main-colorPanel {
     width: 246px;
-    position: relative;
-    left: 5%;
-    top: 162px;
+    position: absolute;
+    left: 20%;
+    top: 40%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -171,14 +136,16 @@
     border: 1px solid;
 }
 
-.main-loadButton {
-    display: inline-block;
-    position: relative;
-    top: -425px;
+.main-imageContainer {
+    position: absolute;
+    display: flex;
+    top: 3%;
     left: 50%;
+    width: 512px;
+    justify-content: space-between;
 }
 
-.main-loadButton input {
+.main-imageContainer-loadButton input {
     height: 33px;
     width: 64px;
     background-color: #00BCD4;
@@ -191,18 +158,11 @@
     cursor: pointer;
 }
 
-.main-loadButton input:hover {
+.main-imageContainer-loadButton input:hover {
     background-color: #1E90FF;
 }
 
-.main-searchField {
-    display: inline-block;
-    position: relative;
-    top: -425px;
-    left: 50%;
-}
-
-.main-searchField input {
+.main-imageContainer-searchField input {
     height: 33px;
     width: 360px;
     background-color: #FAFAFA;
@@ -218,22 +178,7 @@
     padding-left: 15px;
 }
 
-/*TODO searchIcon*/
-.main-searchField input::before {
-    content: url("assets/SearchIcon.png");
-    position: relative;
-    top: 11px;
-    left: 39px;
-}
-
-.main-bw {
-    display: inline-block;
-    position: relative;
-    top: -425px;
-    left: 50%;
-}
-
-.main-bw input{
+.main-imageContainer-bw input{
     height: 33px;
     width: 64px;
     background-color: #00BCD4;

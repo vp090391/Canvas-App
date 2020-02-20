@@ -1,0 +1,247 @@
+.header {
+    width: 100%;
+    height: 52px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.header-panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-panel-h2 {
+    padding-left: 35px;
+    font-family: Roboto, serif;
+    font-size: 20px;
+}
+
+.header-panel-leftButton {
+    padding-left: 19px;
+}
+
+.header-panel-rightButton {
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.main {
+    width: 100%;
+    height: 850px;
+    position: relative;
+}
+
+.canvas-container {
+    margin: 0 auto;
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    left: 50%;
+    top: 70px;
+    box-sizing: content-box;
+    border: 1px solid black;
+}
+
+.main-buttonSizeImage-container {
+    width: 114px;
+    position: absolute;
+    left: 33%;
+    top: 301px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.main-b-c-button {
+    width: 100%;
+    height: 30px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-family: Roboto, serif;
+    font-size: 16px;
+}
+
+.main-instruments {
+    width: 246px;
+    position: relative;
+    left: 5%;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.main-instruments-fillBucket:hover, .main-instruments-chooseColor:hover,
+.main-instruments-pencil:hover {
+    background-color: lightgrey;
+}
+
+.main-instruments > input {
+    width: 100%;
+    height: 57px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-family: Roboto, serif;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 28px 17px;
+    text-align: left;
+    padding-left: 73px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.main-instruments-fillBucket {
+    background-image: url("assets/fillBucket.svg");
+}
+
+.main-instruments-chooseColor {
+    background-image: url("assets/chooseColor.svg");
+}
+
+.main-instruments-pencil {
+    background-image: url("assets/Pencil.png");
+}
+
+.main-instruments-transform {
+    background-image: url("assets/transform.svg");
+    opacity: 0.3;
+}
+
+.main-colorPanel {
+    width: 246px;
+    position: relative;
+    left: 5%;
+    top: 162px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.main-colorPanel-curentColor, .main-colorPanel-prevColor,
+.main-colorPanel-red, .main-colorPanel-blue {
+    height: 57px;
+    font-size: 16px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.main-colorPanel-curentColor input, .main-colorPanel-prevColor input,
+.main-colorPanel-red input, .main-colorPanel-blue input {
+    border-radius: 50%;
+    width: 22px;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.main-colorPanel-curentColor label, .main-colorPanel-prevColor label,
+.main-colorPanel-red label, .main-colorPanel-blue label {
+    line-height: 57px;
+    width: 100%;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.main-colorPanel-curentColor:hover, .main-colorPanel-prevColor:hover,
+.main-colorPanel-red:hover, .main-colorPanel-blue:hover {
+    background-color: lightgrey;
+}
+
+.main-colorPanel-prevColor input {
+    background-color: #7fcc7f;
+    border: 1px solid;
+}
+
+.main-colorPanel-red input {
+    background-color: #FF0000;
+    border: 1px solid;
+}
+
+.main-colorPanel-blue input {
+    background-color: #1E90FF;
+    border: 1px solid;
+}
+
+.main-loadButton {
+    display: inline-block;
+    position: relative;
+    top: -425px;
+    left: 50%;
+}
+
+.main-loadButton input {
+    height: 33px;
+    width: 64px;
+    background-color: #00BCD4;
+    border: 0 solid;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.main-loadButton input:hover {
+    background-color: #1E90FF;
+}
+
+.main-searchField {
+    display: inline-block;
+    position: relative;
+    top: -425px;
+    left: 50%;
+}
+
+.main-searchField input {
+    height: 33px;
+    width: 360px;
+    background-color: #FAFAFA;
+    border: 0 solid;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    padding-left: 15px;
+}
+
+/*TODO searchIcon*/
+.main-searchField input::before {
+    content: url("assets/SearchIcon.png");
+    position: relative;
+    top: 11px;
+    left: 39px;
+}
+
+.main-bw {
+    display: inline-block;
+    position: relative;
+    top: -425px;
+    left: 50%;
+}
+
+.main-bw input{
+    height: 33px;
+    width: 64px;
+    background-color: #00BCD4;
+    border: 0 solid;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

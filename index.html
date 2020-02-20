@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>codejam-image api</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-panel">
+            <img class="header-panel-leftButton" src="assets/header-panel-leftButton.svg" alt="leftButton">
+            <h2 class="header-panel-h2">CodeJam - Image API</h2>
+            <img class="header-panel-rightButton" src="assets/header-panel-RightButton.png" alt="RightButton">
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-instruments">
+
+            <input class="main-instruments-fillBucket" type="button" value="Fill bucket" name="fillBucket" OnClick="fillBucket();">
+
+            <input class="main-instruments-chooseColor" type="button" value="Choose color" name="chooseColor" OnClick="chooseColor();">
+
+            <input class="main-instruments-pencil" type="button" value="Pencil" name="pencil" OnClick="pencil();">
+
+            <input class="main-instruments-transform" type="button" value="Transform" name="transform" OnClick="">
+
+        </div>
+
+        <div class="main-colorPanel">
+
+            <div class="main-colorPanel-curentColor">
+                <input type="color" id="curentColor" value="#7fcc7f" OnClick="">
+                <label for="curentColor">Curent color</label>
+            </div>
+
+            <div class="main-colorPanel-prevColor">
+                <input type="button" id="prevColor" OnClick="">
+                <label for="prevColor">Prev color</label>
+            </div>
+
+            <div class="main-colorPanel-red">
+                <input type="button" id="red" OnClick="">
+                <label for="red">Red</label>
+            </div>
+
+            <div class="main-colorPanel-blue">
+                <input type="button" id="blue" OnClick="">
+                <label for="blue">Blue</label>
+            </div>
+
+        </div>
+
+        <div class="main-buttonSizeImage-container">
+            <input class="main-b-c-button" type="button" value="4x4" name="4x4" OnClick="fourByFour();">
+            <input class="main-b-c-button" type="button" value="32x32" name="32x32" OnClick="thirtyByThirty();">
+            <input class="main-b-c-button" type="button" value="Image" name="Image" OnClick="image();">
+        </div>
+
+        <div class="main-loadButton">
+            <input id="load" type="button" value="Load" name="load" OnClick="loadImage();">
+        </div>
+
+        <div class="main-searchField">
+            <label for="searchField"></label>
+            <input id="searchField" type="text" name="searchField" spellcheck="false" OnClick="">
+        </div>
+
+        <div class="main-bw">
+            <input id="bw" type="button" value="B&W" name="bw" OnClick="grayscale();">
+        </div>
+
+        <div class="canvas-container">
+            <canvas class="canvas">Canvas is here</canvas>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

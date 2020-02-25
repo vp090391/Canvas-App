@@ -81,13 +81,7 @@ function fillBucket() {
     document.querySelector('.main-instruments-chooseColor').style.backgroundColor = '';
     document.querySelector('.main-instruments-pencil').style.backgroundColor = '';
     pencilOff = true;
-
-    for (let i = 0; i <= 3; i++) {
-        for (let j = 0; j <= 3; j++) {
-            ctx.fillStyle = document.getElementById('curentColor').value;
-            ctx.fillRect(16 * i, 16 * j, 16, 16);
-        }
-    }
+    ctx.fillRect(0, 0, 512, 512);
 }
 
 function chooseColor() {
